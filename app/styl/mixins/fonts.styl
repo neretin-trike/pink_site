@@ -1,0 +1,33 @@
+font-weight = {
+    thin: 100, 
+    extralight: 200, 
+    light: 300, 
+    regular: 400, 
+    medium: 500, 
+    semibold: 600, 
+    bold: 700, 
+    extrabold: 800, 
+    black: 900
+}
+
+font(fontName, weight = 'regular', style = normal) 
+    @font-face
+        font-family fontName
+        src url("../assets/fonts/"+fontName+"/"+fontName+"-"+weight+".woff2") format("woff2"),
+            url("../assets/fonts/"+fontName+"/"+fontName+"-"+weight+".woff") format("woff"),
+            url("../assets/fonts/"+fontName+"/"+fontName+"-"+weight+".ttf") format("truetype")
+        font-style style
+        font-weight font-weight[weight]
+
+font-name = 'Lato'
+
+font(font-name, 'black')
+font(font-name, 'bold')
+// font(font-name, 'extralight')
+// font(font-name, 'extrabold')
+font(font-name, 'light')
+// font(font-name, 'medium')
+font(font-name, 'regular')
+// font(font-name, 'semibold')
+// font(font-name, 'thin')
+
