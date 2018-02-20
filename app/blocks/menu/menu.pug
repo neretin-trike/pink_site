@@ -1,3 +1,12 @@
 mixin menu()
-	.menu
-		| menu
+	nav.menu
+		ul.menu__list(class='d-flex justify-content-around')
+			li.menu__item
+				a.link.menu__link(href='#') Главная
+			li.menu__item
+				a.link.menu__link(href='#') Фотографии
+			li.menu__item
+				a.link.menu__link(href='#') Конкурс
+			li.menu__item
+				a.link.menu__link(href='#') HTML Academy
+

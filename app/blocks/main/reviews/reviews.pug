@@ -1,3 +1,6 @@
 mixin reviews()
-	.reviews
-		| reviews
+	section.reviews
+		h2.title-hidden Отзывы
+		button.button.reviews__button.reviews__button_prev prev
+		+review-item('Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!','Николай Петров', '25 лет, водитель трамвая')
+		button.button.reviews__button.reviews__button_next next

@@ -1,3 +1,7 @@
 mixin prices()
-	.prices
-		| prices
+	section.prices
+		h2.title-hidden Тарифы
+		.prices__wrap
+			+price-item('База', '1,99 USD', true, false, false)
+			+price-item('Стандарт', '3,99 USD', true, true, false)
+			+price-item('Анлим', '9,99 USD', true, true, true)

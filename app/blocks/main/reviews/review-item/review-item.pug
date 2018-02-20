@@ -1,3 +1,5 @@
-mixin review-item()
-	.review-item
-		| review-item
+mixin review-item(text, author, about)
+	blockquote.review-item
+		p.text.review-item__text #{text}
+		cite.review-item__author #{author}
+			span.review-item__about #{about}
