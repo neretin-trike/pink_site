@@ -313,7 +313,7 @@ function parseForTree(command){
 
 // parseForTree('header>+main')
 
-parseForTree('header+((main2>home>slogan)+about)+footer');
+// parseForTree('header+((main2>home>slogan)+about)+footer');
 
 // parseForTree('b1>b12^(b2+b3)');
 
@@ -321,7 +321,7 @@ parseForTree('header+((main2>home>slogan)+about)+footer');
 
 // parseForTree('asd>asd^(asd2+asd3)')
 
-// parseForTree(blockNameFromCli);
+parseForTree(blockNameFromCli);
 
 console.log(paths);
 
@@ -330,7 +330,7 @@ if (parseAchieved == true) {
 	rl.prompt();
 	rl.on('line', (line) => {
 		if (line=='y'){
-			// createAnotherFiles();
+			createAnotherFiles();
 			createImportFile(__dirname+'/app/','../blocks/')
 			rl.close();
 		}
