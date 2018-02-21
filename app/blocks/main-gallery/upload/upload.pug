@@ -1,0 +1,12 @@
+mixin upload()
+	section.upload
+		h2.title-hidden Загрузка фото
+		.upload__widget
+			.upload__wrap
+				img.upload__img(src="", alt="")/ img
+			form.upload__form
+				input.upload__input_range.upload__input_cut(type="range", name="")/
+				input.upload__input_range.upload__input_fill(type="range", name="")/
+				input.upload__input_range.upload__input_bright(type="range", name="")/
+				button.button.button_theme_rounded Запостить
+				button.button.button_theme_rounded.button_disabled Отменить

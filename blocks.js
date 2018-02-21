@@ -313,7 +313,7 @@ function parseForTree(command){
 
 // parseForTree('header>+main')
 
-// parseForTree('header+((main2>home>slogan)+about)+footer');
+// parseForTree('header+((main>home>slogan)+about)+footer');
 
 // parseForTree('b1>b12^(b2+b3)');
 
@@ -350,8 +350,8 @@ function createAnotherFiles(){
 }
 
 const importPaths = {
-	pug: ' include ',
-	styl: ' @import ',
+	pug: 'include ',
+	styl: '@import ',
 };
 
 function createImportFile(dir,prefix) {
@@ -370,17 +370,37 @@ function createImportFile(dir,prefix) {
 		});
 
 		const filename = `import.${ext}`;
-		const filePath = path.join(dir+ext, filename);
+		const filePath = path.join(dir, ext, filename);
 
 		promises.push(
 				new Promise((resolve, reject) => {
-					fs.writeFile(filePath, fileSource, 'utf8', err => {
-						if (err) {
-							reject(`ERR>>> Failed to create a file '${filePath}'`.red);
+
+					fs.stat(filePath, err => {
+						if(err == null) {
+
+							fs.appendFile(filePath, '\n' + fileSource, 'utf8', err => {
+								if (err) {
+									reject(`ERR>>> Failed to update a file '${filePath}'`.red);
+								} else {
+									resolve();
+								}
+							});
+
+						} else if(err.code == 'ENOENT') {
+
+							fs.writeFile(filePath, fileSource, 'utf8', err => {
+								if (err) {
+									reject(`ERR>>> Failed to create a file '${filePath}'`.red);
+								} else {
+									resolve();
+								}
+							});
+							
 						} else {
-							resolve();
+							console.log('Some other error: ', err.code);
 						}
 					});
+
 				})
 		);
 	});

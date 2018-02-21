@@ -1,0 +1,10 @@
+mixin photo-item(img, author, time, text, like)
+	figure.photo-item
+		.photo-item__wrap
+			img.photo-item__img(src="", alt="")/ #{img}
+		figcaption.photo-item__caption
+			.photo-item__info
+				span.photo-item__author #{author}
+				span.photo-item__time #{time}
+			p.photo-item__text #{text}
+			p.photo-item__like #{like}
