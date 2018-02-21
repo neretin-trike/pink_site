@@ -361,7 +361,6 @@ function createImportFile(dir,prefix) {
 		var fileSource = '';
 		var quote = '"';
 		if (ext === 'pug'){
-			fileSource = 'mixin importBlocks()\n'
 			quote = '';
 		}
 

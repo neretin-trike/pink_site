@@ -2,7 +2,7 @@ import 'bootstrap/dist/css/bootstrap-grid.css';
 
 import '../../styl/style.styl';
 
-import '../../pug/index.pug';
+import '../../pug/common.pug';
 import '../../pug/gallery.pug';
 
 

@@ -1,12 +1,91 @@
 extends common.pug
 
 block title
-    title Pink - галлерея
+    title Pink - Галлерея
 
 block header
     +header()
     
 block main
+    main.gallery
+        section.about
+            h1.about__slogan Фотографии пользователей
+        section.photo
+            .container
+                h2.title-hidden Фотографии
+                p.photo__description Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?
+            figure.day-photo
+                img.day-photo__img(src="", alt="")/ img
+                figcaption.day-photo__caption
+                    .day-photo__info
+                        span.day-photo__author Анна
+                        span.day-photo__time (5 минут назад)
+                        span.day-photo__like Нравится: 215
+                    p.daty-photo__text Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!
+            .container
+                figure.photo-item
+                    .photo-item__wrap
+                        img.photo-item__img(src="", alt="")/ img
+                    figcaption.photo-item__caption
+                        .photo-item__info
+                            span.photo-item__author Левон
+                            span.photo-item__time (5 часов назад)
+                        p.photo-item__text Вчера он на луну летал, сегодня в руки к нам попал.
+                        p.photo-item__like Нравится: 356
+                figure.photo-item
+                    .photo-item__wrap
+                        img.photo-item__img(src="", alt="")/ img
+                    figcaption.photo-item__caption
+                        .photo-item__info
+                            span.photo-item__author Антон
+                            span.photo-item__time (12 часов назад)
+                        p.photo-item__text Соседи будут рады!
+                        p.photo-item__like Нравится: 666
+                figure.photo-item
+                    .photo-item__wrap
+                        img.photo-item__img(src="", alt="")/ img
+                    figcaption.photo-item__caption
+                        .photo-item__info
+                            span.photo-item__author Борис
+                            span.photo-item__time (20 часов назад)
+                        p.photo-item__text Здесь могла быть ваша цитата о высоком и вечном.
+                        p.photo-item__like Нравится: 215
+                figure.photo-item
+                    .photo-item__wrap
+                        img.photo-item__img(src="", alt="")/ img
+                    figcaption.photo-item__caption
+                        .photo-item__info
+                            span.photo-item__author Сергей
+                            span.photo-item__time (25 часов назад)
+                        p.photo-item__text Самая кубанская в мире!
+                        p.photo-item__like Нравится: 4
+                figure.photo-item
+                    .photo-item__wrap
+                        img.photo-item__img(src="", alt="")/ img
+                    figcaption.photo-item__caption
+                        .photo-item__info
+                            span.photo-item__author Максим
+                            span.photo-item__time (40 часов назад)
+                        p.photo-item__text Где снег-то?
+                        p.photo-item__like Нравится: 150
+                figure.photo-item
+                    .photo-item__wrap
+                        img.photo-item__img(src="", alt="")/ img
+                    figcaption.photo-item__caption
+                        .photo-item__info
+                            span.photo-item__author Надежда
+                            span.photo-item__time (45 часов назад)
+                        p.photo-item__text Всем GM и взаимные лайки!
+                        p.photo-item__like Нравится: 2560
+        section.upload
+            h2.title-hidden Загрузка фото
+            .upload__widget
+                .upload__wrap
+                    img.upload__img(src="", alt="")/ img
+                form.upload__form
+                    input.upload__input_range.upload__input_cut(type="range", name="")/
+                    input.upload__input_range.upload__input_fill(type="range", name="")/
+                    input.upload__input_range.upload__input_bright(type="range", name="")/
+                    button.button.button_theme_rounded Запостить
+                    button.button.button_theme_rounded.button_disabled Отменить
     //- +main()
-
-    
