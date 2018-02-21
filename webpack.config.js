@@ -57,7 +57,12 @@ const common = merge([
     },
     plugins: [
       new HtmlWebpackPlugin({
+        filename: 'index.html',
         template: './app/pug/index.pug',
+      }),
+      new HtmlWebpackPlugin({
+        filename: 'gallery.html',
+        template: './app/pug/gallery.pug',
       }),
     ],
   },
