@@ -64,6 +64,10 @@ const common = merge([
         filename: 'gallery.html',
         template: './app/pug/gallery.pug',
       }),
+      new HtmlWebpackPlugin({
+        filename: 'form.html',
+        template: './app/pug/form.pug',
+      }),
     ],
   },
   pug(),
