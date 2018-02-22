@@ -1,0 +1,35 @@
+mixin forms()
+	.forms
+		.container
+			h2.title-hidden Форма заполнения
+			p.forms__description Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:
+			form.forms__wrap
+				fieldset.form__item.form__item_dir_row
+					legend.form__title Информация о конкурсанте 
+					+form-about('last-name','Фамилия','Укажите фамилию *')
+					+form-about('first-name','Имя','Введите ваше имя *')
+					+form-about('patronymic','Отчество','Ну и отчество тоже')
+				fieldset.form__item.form__item_dir_row
+					legend.form__title С какими приложениями путешествовали
+					+form-app('ios','Pink для iOS')
+					+form-app('android','Pink для Android')
+					+form-app('windows','Windows Phone')
+				fieldset.form__item.form__item_dir_column
+					legend.form__title Контактная информация
+					+form-contact('phone','Номер телефона','Номер, пожалуйста')
+					+form-contact('email','Адрес почты','Введите почту *')
+				fieldset.form__item.form__item_dir_column
+					legend.form__title Ваши безбашенные достижения в путешествии
+					+form-achieve('shark','achieve','Сделал селфи с акулой')
+					+form-achieve('chuck','achieve','Видел Чака Норрсиа')
+					+form-achieve('tower','achieve','Удержал башню')
+					+form-achieve('beach','achieve','Обгорел на пляже')
+					+form-achieve('souvenirs','achieve','Накупил сувениров')
+					+form-achieve('hotel','achieve','Разгромил отель')
+				fieldset.form__item.form__item_dir_row
+					legend.form__title Опишите ваши эмоции
+					+form-emotion('Можно прям в красках, не стесняясь в выражениях')
+				button.button.button_theme_form Отправить форму
+				span.forms__note 
+					span.forms__star * 
+					| — обязательные для заполнения поля
