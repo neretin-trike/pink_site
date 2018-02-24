@@ -6,7 +6,7 @@
   "dependencies": {
     "autoprefixer": "^8.0.0",
     "bootstrap": "^4.0.0",
-    "jquery": "1.9.1",
+    "jquery": "^3.0.0",
     "popper.js": "^1.12.9"
   },
   "devDependencies": {
