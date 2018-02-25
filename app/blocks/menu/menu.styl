@@ -1,5 +1,25 @@
 .menu 	
-	background-color pink
-	display block
-	
+	max-width 64.3rem
+	flex 1
 
+	&__list
+		display flex
+		justify-content space-between
+
+		list-style-type none
+		padding 0
+
+	&__link
+		font-size 1.8rem
+		color color-white
+
+		&:hover
+			color color-pink
+
+		&:active
+			color color-white
+			opacity 0.3
+
+		&_active
+			padding-bottom 1rem
+			border-bottom 0.2rem solid color-white

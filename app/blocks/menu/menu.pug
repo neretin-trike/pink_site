@@ -1,12 +1,18 @@
-mixin menu()
+mixin menu(current)
+	-
+		var menuItem = [
+			{link: 'index.html', caption : "Главная"},
+			{link: 'gallery.html', caption : "Фотографии"},
+			{link: 'form.html', caption : "Конкурс"}
+		]
 	nav.menu
-		ul.menu__list(class='d-flex justify-content-around')
-			li.menu__item
-				a.link.menu__link(href='index.html') Главная
-			li.menu__item
-				a.link.menu__link(href='gallery.html') Фотографии
-			li.menu__item
-				a.link.menu__link(href='form.html') Конкурс
+		ul.menu__list
+			each item in menuItem
+				li.menu__item
+					if current == item.link
+						a.link.menu__link.menu__link_active(href=item.link) #{item.caption}
+					else
+						a.link.menu__link(href=item.link) #{item.caption}
 			li.menu__item
 				a.link.menu__link(href='https://htmlacademy.ru/' target='__blank') HTML Academy
 
