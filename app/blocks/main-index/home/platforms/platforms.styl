@@ -1,2 +1,31 @@
-platforms 	
-	display block
+.platforms 	
+	max-width 30rem
+
+	&__wrap
+		display flex
+		justify-content space-around
+
+	&__link
+		text-indent -999rem
+
+		width 7rem
+		height @width 
+
+		background-repeat no-repeat
+		background-position center
+
+		&_apple
+			background-image url('../assets/images/platform/apple.svg')
+		&_android
+			background-image url('../assets/images/platform/android.svg')
+		&_windows
+			background-image url('../assets/images/platform/windows.svg')
+			
+
+	&__description
+		text-align center
+
+		font-size 1.8rem
+		font-weight fw-light
+
+
