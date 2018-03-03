@@ -1,5 +1,6 @@
 mixin feature-item(img, title, description)
 	.feature-item
-		img.feature-item__img(src="#{img}", alt="", srcset="")/ img
-		h3.fetature-item__title #{title}
-		p.text.fetature-item__description #{description}
+		figure.feature-item__fig
+			img.feature-item__img(src=require('../assets/images/features/image_'+img+'.png'), alt="", srcset="")/
+		h3.feature-item__title.features__feature-item #{title}
+		p.text.feature-item__description #{description}
