@@ -6,17 +6,20 @@ mixin price-item(title, cost, filterInc, smileInc, commentInc)
 			{include: commentInc, parameter : "Комментарии"}
 		]
 	section.price-item
-		.prices__wrap
-			.price-item
-				.price-item-item__head
-					h4.price-item__title #{title}
-					.price-item__cost #{cost}
-				ul.price-item__options
-					each val in priceItem 
-						li.price-item__item
-							span.price-item__parameter #{val.parameter} 
-							if val.include == true
-								span.price-item__include.price-item__include_yes Да
-							else
-								span.price-item__include.price-item__include_no Нет
+		.price-item
+			if title == 'Стандарт'
+				- var hitClass = 'price-item__head_hit'
+			else
+				- var hitClass = ''
+			.price-item__head(class=hitClass)
+				h4.price-item__title #{title}
+				.price-item__cost #{cost}
+			ul.price-item__options
+				each val in priceItem 
+					li.text.price-item__item
+						span.price-item__parameter #{val.parameter} 
+						if val.include == true
+							span.price-item__include.price-item__include_yes Да
+						else
+							span.price-item__include.price-item__include_no Нет
 					
