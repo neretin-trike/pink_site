@@ -10,9 +10,9 @@ mixin menu(current)
 			each item in menuItem
 				li.menu__item
 					if current == item.link
-						a.link.menu__link.menu__link_active(href=item.link) #{item.caption}
+						a.menu__link.menu__link_active(href=item.link) #{item.caption}
 					else
-						a.link.menu__link(href=item.link) #{item.caption}
+						a.menu__link(href=item.link) #{item.caption}
 			li.menu__item
-				a.link.menu__link(href='https://htmlacademy.ru/' target='__blank') HTML Academy
+				a.menu__link(href='https://htmlacademy.ru/' target='__blank') HTML Academy
 

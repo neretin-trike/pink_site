@@ -1,9 +1,11 @@
 mixin information()
 	section.information
-		h2.title-hidden Информация
-		figure.information__timer
-			img.information__img(src="", alt="")/ img
-		article.information__wrap
-			h3.information__title Эффект на 24 часа!
-			p.text.information__description Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!
-			a.link.information__link(href="#") Узнать больше об исследовании
+		.container
+			h2.title-hidden Информация
+			.information__wrap
+				figure.information__timer
+					img.information__img(src=require("../assets/images/timer.svg"), alt="")/
+				article.information__description.main-index__information__description
+					h3.information__title Эффект на 24 часа!
+					p.text.information__text Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!
+					a.link.information__link(href="#") Узнать больше об исследовании
