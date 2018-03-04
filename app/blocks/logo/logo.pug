@@ -1,5 +1,6 @@
-mixin logo()
-	.logo.header__logo
+mixin logo(name = '')
+	- var tmp = src
+	.logo(class!=attributes.class)
 		.logo__wrap
 			a.logo__link(href="index.html")
-				img.logo__img(src=require('../assets/images/logo.svg'))
+				img.logo__img(src=require('../assets/images/logo'+name+'.svg'))

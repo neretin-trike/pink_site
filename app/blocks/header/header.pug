@@ -1,5 +1,4 @@
 mixin header(current)
-	.container
-		header.header
-			+logo()
-			+menu(current)
+	header.header.container
+		+logo()(class="header__logo")
+		+menu(current)
