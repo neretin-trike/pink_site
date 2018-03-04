@@ -1,2 +1,26 @@
-reviews 	
-	display block
+.reviews 	
+	base-markup(7rem, 4.5rem)
+
+	&__button
+		color color-black
+
+		text-indent -999.9rem
+		
+		width 3rem
+		height 4.5rem
+
+		background-image url('../assets/images/arrow_left.svg')
+		background-repeat no-repeat
+
+		&:hover
+			opacity 0.3
+		&:active
+			opacity 0.1
+
+		&_next
+			transform scalex(-1)
+
+	&__wrap
+		display flex
+		align-items center
+		justify-content space-between

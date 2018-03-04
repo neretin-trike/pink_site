@@ -1,2 +1,30 @@
-review-item 	
-	display block
+.review-item 	
+	max-width 70rem
+	text-align center
+
+	&:before
+		content ''
+		display block
+		margin 0 auto
+
+		width 9rem
+		height @width
+		
+		background-image url('../assets/images/quote.svg')
+		background-position center
+		background-repeat no-repeat
+
+	&__text
+		padding 5rem 0	
+
+	&__author
+		display block	
+
+		font-size 2.4rem
+		font-weight fw-bold
+		font-style normal
+
+	&__about
+		line-height 2
+		font-size 1.8rem
+		color color-darkblue
