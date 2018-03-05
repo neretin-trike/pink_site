@@ -1,12 +1,19 @@
 mixin upload()
 	section.upload
-		h2.title-hidden Загрузка фото
-		.upload__widget
-			.upload__wrap
-				img.upload__img(src="", alt="")/ img
-			form.upload__form
-				input.upload__input_range.upload__input_cut(type="range", name="")/
-				input.upload__input_range.upload__input_fill(type="range", name="")/
-				input.upload__input_range.upload__input_bright(type="range", name="")/
-				button.button.button_theme_rounded Запостить
-				button.button.button_theme_rounded.button_disabled Отменить
+		.container
+			h2.title-hidden Загрузка фото
+			p.text.upload__description Затмите их всех! <br> Выкладывайте все, что накопилось в телефоне!
+			.upload__widget
+				.upload__wrap
+					img.upload__img(src=require('../assets/images/gallery/image_7.jpg'), alt="")/ 
+				form.upload__form
+					.upload__setting
+						.upload__slider.upload__slider_crop
+							input.upload__input(type="range", name="")/
+						.upload__slider.upload__slider_fill
+							input.upload__input(type="range", name="")/
+						.upload__slider.upload__slider_contrast
+							input.upload__input(type="range", name="")/
+					.upload__button-bar
+						button.button.button_theme_upload Запостить
+						button.button.button_theme_cancel Отмена

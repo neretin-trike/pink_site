@@ -1,4 +1,4 @@
-button 	
+.button 	
 	padding 1rem 3rem 
 	
 	color color-white
@@ -15,4 +15,26 @@ button
 	&:active
 		color rgba(color-pink,30%)
 		background-color color-white
+
+	&_theme_upload
+		border-color color-pink
+		color color-pink
+
+		&:hover
+			color color-white
+			background-color color-pink
+		&:active
+			color rgba(color-white,30%)
+			background-color color-pink
 		
+	&_theme_cancel
+		border-color rgba(color-darkgray,10%)
+		color rgba(color-darkgray,10%)
+
+		&:hover
+			border-color color-darkgray
+			background-color color-lightgray
+			color color-darkgray
+		&:active
+			color rgba(color-white,30%)
+			background-color color-darkgray
