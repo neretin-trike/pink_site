@@ -1,2 +1,52 @@
 .photo-item 	
-	display block
+	// padding 0 1rem
+	padding-top 5rem
+	
+	max-width 30rem	
+
+	&__wrap
+		overflow hidden
+		height 40rem
+		
+	&__caption
+		background-color color-lightgray
+		padding 3rem
+
+		color color-darkblue
+
+		min-height 17rem
+
+		display flex
+		flex-direction column
+
+	&__author
+		font-size 1.4rem
+		font-weight fw-bold
+
+	&__time
+		font-size 1.2rem
+		font-weight fw-light
+		text-transform uppercase
+
+		padding-left 0.25rem
+
+	&__like
+		vertical-align bottom
+
+		font-size 1.2rem
+		color color-pink
+		text-transform uppercase
+
+		display block
+
+		background-image url('../assets/images/like.svg')
+		background-repeat no-repeat
+		background-position right bottom
+		
+	&__text
+		padding-top 0.8rem
+		padding-bottom 1.6rem
+
+		line-height 1.5
+
+		flex 1 0 auto

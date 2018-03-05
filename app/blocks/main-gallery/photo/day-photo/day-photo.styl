@@ -1,2 +1,41 @@
-.day-photo 	
-	display block
+.day-photo 
+		
+	&__img
+		width 100%
+		min-height 50rem
+		object-fit cover
+
+	&__caption
+		background-color color-lightgray
+		padding 3rem
+
+		color color-darkblue
+
+	&__author
+		font-size 1.4rem
+		font-weight fw-bold
+
+	&__time
+		font-size 1.2rem
+		font-weight fw-light
+		text-transform uppercase
+
+		padding-left 0.25rem
+
+	&__like
+		float right
+
+		font-size 1.2rem
+		color color-pink
+		text-transform uppercase
+
+		padding-right 6rem
+
+		display block
+
+		background-image url('../assets/images/like.svg')
+		background-repeat no-repeat
+		background-position 80% center
+		
+	&__text
+		line-height 2
