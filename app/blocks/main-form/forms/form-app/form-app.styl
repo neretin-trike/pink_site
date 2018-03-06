@@ -1,2 +1,26 @@
 .form-app 	
-	display block
+	padding-bottom 3rem
+	padding-left 7.5rem
+
+	color color-darkblue
+	font-size 1.8rem
+
+	&__input
+		display none
+
+		&:checked + ^[0]__label
+			background-image repeating-radial-gradient(color-pink, color-pink 0.7rem, #fff 0.8rem, #fff 2rem)
+
+	&__label
+		position relative
+		top 1.4rem
+		margin-right 2rem
+		
+		display inline-block
+		width 4rem
+		height @width
+
+		background-color transparent
+		border 0.2rem solid color-gray
+		border-radius 50%
+
