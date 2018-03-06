@@ -20,13 +20,16 @@ mixin forms()
 					+form-contact('email','Адрес почты','Введите почту *')
 				fieldset.forms__item.forms__item_dir_column
 					legend.forms__title Ваши безбашенные достижения в путешествии
-					+form-achieve('shark','achieve','Сделал селфи с акулой')
-					+form-achieve('chuck','achieve','Видел Чака Норрсиа')
-					+form-achieve('tower','achieve','Удержал башню')
-					+form-achieve('beach','achieve','Обгорел на пляже')
-					+form-achieve('souvenirs','achieve','Накупил сувениров')
-					+form-achieve('hotel','achieve','Разгромил отель')
-				fieldset.forms__item.forms__item_dir_row
+					.forms__col
+						+form-achieve('shark','achieve','Сделал селфи с акулой')
+						+form-achieve('beach','achieve','Обгорел на пляже')
+					.forms__col
+						+form-achieve('chuck','achieve','Видел Чака Норриса')
+						+form-achieve('souvenirs','achieve','Накупил сувениров')
+					.forms__col
+						+form-achieve('tower','achieve','Удержал башню')
+						+form-achieve('hotel','achieve','Разгромил отель')
+				fieldset.forms__item.forms__item_dir_column
 					legend.forms__title Опишите ваши эмоции
 					+form-emotion('Можно прям в красках, не стесняясь в выражениях')
 				button.button.button_theme_form Отправить форму

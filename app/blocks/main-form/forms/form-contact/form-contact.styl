@@ -1,2 +1,36 @@
 .form-contact 	
-	display block
+	
+	display inline-block
+
+	&__input
+		border 0.2rem solid color-gray
+		width 31rem
+
+		margin-left 5.5rem
+
+	&__button
+		text-indent -99.9rem
+		margin-left -0.4rem
+
+		vertical-align top
+		width 7rem
+		height @width
+
+		background-color color-gray
+		background-repeat no-repeat
+		background-position center
+
+		&_phone
+			background-image url('../assets/images/phone.svg')
+
+		&_email
+			background-image url('../assets/images/email.svg')
+
+	&__label
+		display block
+		color color-pink
+		text-transform uppercase
+		font-size 1.4rem
+
+		margin-top 1.8rem
+		margin-left 8rem

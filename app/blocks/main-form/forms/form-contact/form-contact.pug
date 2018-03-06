@@ -1,5 +1,5 @@
 mixin form-contact(id, label, placeholder)
 	.form-contact
 		input.input.form-contact__input(type="text", id=id placeholder=placeholder)
-		input.form-contact__button(type="button" value=id)
+		input.form-contact__button(type="button" value=id class="form-contact__button_"+id)
 		label.label.form-contact__label(for=id) #{label}
