@@ -8,22 +8,30 @@
 		padding-bottom 1.4rem
 
 	&__input
-			display none
+		display none
 
-			&:checked + ^[0]__label
-				background-repeat no-repeat
-				background-position center
-				background-image url('../assets/images/check.svg')
+		&:checked + ^[0]__label
+			background-repeat no-repeat
+			background-position center
+			background-image url('../assets/images/check.svg')
 
-		&__label
-			position relative
-			top 1.4rem
-			margin-right 2rem
-			
-			display inline-block
-			width 4rem
-			height @width
+	&__label
+		position relative
+		top 1.4rem
+		margin-right 2rem
+		
+		display inline-block
+		width 4rem
+		height @width
 
-			background-color transparent
-			border 0.2rem solid color-gray
+		background-color transparent
+		border 0.2rem solid color-gray
+
+		&:hover
+			border-color color-darkblue
+		&:active
+			border-color color-pink
+
+
+		
 
