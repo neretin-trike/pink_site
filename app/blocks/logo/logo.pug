@@ -1,6 +1,9 @@
 mixin logo(name = '')
 	- var tmp = src
+	input.logo__input(type='checkbox' id='bob')
+	label.logo__label(for='bob')
 	.logo(class!=attributes.class)
 		.logo__wrap
 			a.logo__link(href="index.html")
 				img.logo__img(src=require('../assets/images/logo'+name+'.svg'))
+

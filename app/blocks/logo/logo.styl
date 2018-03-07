@@ -1,2 +1,43 @@
 .logo 	
-	display block
+	display flex
+	align-items center
+
+	&__input
+		display none
+
+		&:checked ~ ^[0]__label
+			background-image url('../assets/images/menu_burger.svg')
+
+		&:checked ~ ^[0]__label ~ .menu
+			display none
+
+		&:checked ~ ^[0]__label ~ .logo
+			background-color rgba(color-black,30%)
+
+	&__label
+		display none
+		
+		cursor pointer
+		position absolute
+		top 3.5rem
+		right 2rem
+
+		width 3.2rem
+		height @width
+
+		background-image url('../assets/images/menu_cross.svg')
+		background-repeat no-repeat
+		background-position center		
+
+	@media (max-width 660px)
+		width 100%
+		padding 2.7rem 2rem
+		box-shadow 0 0.1rem 0 color-black
+		background-color color-darkblue
+
+		&__label
+			display block
+			
+@media (min-width 661px)
+	.menu
+		display block !important

@@ -1,10 +1,12 @@
 .menu 	
 	max-width 64.3rem
 	flex 1
+	text-align center
 
 	&__list
 		display flex
 		justify-content space-between
+
 
 		list-style-type none
 		padding 0
@@ -23,3 +25,19 @@
 		&_active
 			padding-bottom 1rem
 			border-bottom 0.2rem solid color-white
+
+	@media (max-width 660px)
+		width 100%
+		background-color color-darkblue
+
+		&__list
+			flex-direction column
+			margin 0
+
+		&__link
+			display block
+			padding 2.3rem 0
+			text-transform uppercase
+			font-weight fw-bold
+			box-shadow 0 0.1rem 0 color-black, inset 0 0.2rem 0 rgba(color-white,15%);
+			
