@@ -1,7 +1,11 @@
 .prices 	
 	base-markup(14.5rem, 10rem)
 
-	background: linear-gradient(177deg, color-white 15%, color-lightgray 15%);
+	background linear-gradient(177deg, color-white 15%, color-lightgray 15%)
 
 	&__wrap
 		display flex
+
+	@media (max-width 660px)
+		padding 6rem 0 
+		background linear-gradient(177deg, color-white 8%, color-lightgray 8%)

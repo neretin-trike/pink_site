@@ -28,3 +28,21 @@
 		line-height 2
 		font-size 1.8rem
 		color color-darkblue
+
+	@media (max-width 660px)
+		&:before
+			display none
+
+		&__text
+			padding-top 0
+			padding-bottom 3.8rem
+
+			&:before
+				content "«"
+			&:after
+				content "»"
+
+		&__author
+			font-size 2rem
+		&__about
+			font-size 1.4rem

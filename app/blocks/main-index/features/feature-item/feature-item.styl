@@ -28,3 +28,37 @@
 		font-size 3rem
 		font-weight fw-bold
 		line-height 3rem
+
+	&:first-child
+		display none	
+
+	@media (max-width 660px)
+		
+		&:first-child 
+			display block
+			
+			position absolute
+			top -10rem
+			width 50%
+
+			:after
+				display none
+
+		&:first-child &__img
+			width 100%
+
+		&:not(:first-child) 
+			padding 0
+			padding-left 52%
+			text-align left
+			margin-bottom 3rem 
+
+		&:not(:first-child) &__title
+			font-size 1.8rem	
+			line-height 1
+
+		&:not(:first-child) &__description
+			font-size 1.4rem					
+
+		&:not(:first-child) &__fig
+			display none
