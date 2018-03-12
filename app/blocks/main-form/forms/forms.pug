@@ -15,7 +15,7 @@ mixin forms()
 					+form-app('android','Pink для Android')
 					+form-app('windows','Windows Phone')
 				fieldset.forms__item.forms__item_dir_column
-					legend.forms__title Контактная информация
+					legend.forms__title.forms__title_contact Контактная информация
 					+form-contact('phone','Номер телефона','Номер, пожалуйста')
 					+form-contact('email','Адрес почты','Введите почту *')
 				fieldset.forms__item.forms__item_dir_column
@@ -35,4 +35,4 @@ mixin forms()
 				button.button.button_theme_form Отправить форму
 				span.forms__note 
 					span.forms__star * 
-					| — обязательные для заполнения поля
+					| — обязательные поля

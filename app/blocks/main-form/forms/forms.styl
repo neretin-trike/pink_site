@@ -67,3 +67,34 @@
 		&__col
 			width 100%
 			float none
+
+	@media (max-width 320px)
+		&__wrap
+			justify-content center
+		
+		&__description
+			padding-left 2.4rem
+			padding-right 2.4rem
+
+		&__title
+			text-align center		
+			position relative
+			top 4.5rem
+
+			&_contact
+				display none
+
+		&__item
+			border none
+			padding-top 7rem
+			margin-bottom 0
+			
+			&:nth-child(even)
+				background-color color-lightgray
+			
+		&__col
+			padding-left 0
+
+		&__note
+			display inline-block
+			margin 3.5rem 0
