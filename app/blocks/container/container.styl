@@ -4,11 +4,16 @@
 	padding-left 1rem
 	padding-right 1rem
 
-	&_absolute
+	&__absolute
 		position absolute
 		left 0
 		right 0
 
 	@media (max-width 320px)
+
 		position relative
 		z-index 1
+		
+		&__absolute
+			top 0
+			position absolute
