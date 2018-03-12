@@ -2,6 +2,9 @@
 	max-width 70rem
 	text-align center
 
+	display flex
+	flex-direction column
+
 	&:before
 		content ''
 		display block
@@ -46,3 +49,19 @@
 			font-size 2rem
 		&__about
 			font-size 1.4rem
+
+	@media (max-width 320px)
+
+		&__text
+			font-size 1.4rem !important
+			order 2
+
+			padding-bottom 0
+
+		&__about
+			display none
+
+		&__author
+			order 1
+			font-size 1.8rem
+			padding-bottom 2rem

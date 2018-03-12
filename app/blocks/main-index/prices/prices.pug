@@ -3,7 +3,7 @@ mixin prices()
 		.container
 			h2.title-hidden Тарифы
 			.prices__wrap
-				.price-item
+				.price-item.price-item_full
 					ul.price-item__options
 						li.text.price-item__item
 							span.price-item__parameter.price-item__parameter_desktop Розовый фильтр
@@ -14,3 +14,10 @@ mixin prices()
 				+price-item('База', '1,99 USD', true, false, false)
 				+price-item('Стандарт', '3,99 USD', true, true, false)
 				+price-item('Анлим', '9,99 USD', true, true, true)
+			ul.prices__slider.circle-switcher
+				li.prices__slider-item
+					a.prices__link(href="#")
+				li.prices__slider-item
+					a.prices__link.selected(href="#")
+				li.prices__slider-item
+					a.prices__link(href="#")

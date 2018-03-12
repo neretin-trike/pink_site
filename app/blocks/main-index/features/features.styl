@@ -2,7 +2,7 @@
 
 	base-markup(7rem, 7rem)
 
-	background: linear-gradient(177deg, color-white 40%, color-lightgray 40%);
+	background linear-gradient(177deg, color-white 40%, color-lightgray 40%);
 
 	&__question	
 		max-width 82rem
@@ -29,3 +29,13 @@
 
 		&__wrap
 			flex-direction column
+
+	@media (max-width 320px)
+		background linear-gradient(177deg, color-white 24%, color-lightgray 24%);
+		padding-bottom 26rem
+		overflow hidden
+		
+		&__question
+			font-size 2.4rem
+			padding 0 3rem
+			padding-bottom 10rem
