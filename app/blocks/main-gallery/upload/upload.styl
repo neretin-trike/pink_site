@@ -29,10 +29,11 @@
 		
 		padding-left 9rem
 		padding-right 3rem
-		
 
 		background-repeat no-repeat
 		background-position 0
+
+		border-bottom 0.1rem solid rgba(color-darkblue, 10%)
 
 		&_crop
 			background-image url('../assets/images/crop.svg')
@@ -72,3 +73,26 @@
 	&__button-bar
 		display flex
 		justify-content space-between
+
+	@media (max-width 660px)
+		&__widget
+			padding-left 2rem
+			padding-right 3.5rem
+
+		&__slider
+			background-size 3rem
+
+			padding-left 4rem
+			padding-right 2rem
+
+			&_contrast
+				background-size 2rem
+
+		&__form
+			padding-left 4.5rem
+
+		&__input
+			width 20rem
+
+		&__button-bar
+			flex-direction column
