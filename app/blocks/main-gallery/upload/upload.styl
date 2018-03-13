@@ -44,31 +44,57 @@
 			background-position 3%
 
 	&__input
-		display block
-		width 29rem
+		
+		track()
+			box-sizing: border-box;
+			border: none;
+			width: 29rem;
+			height: 0.25rem;
+			background: color-darkblue;
 
+		thumb(offset = 0, size = 1.4rem, stroke = 0.2rem)
+			-webkit-appearance: none;
+			appearance: none;
 
-		-webkit-appearance none
-		height 0.2rem
-		background-color color-darkblue
+			margin 0.5*offset 
 
-		&_control
-			display none
-
-		&::-webkit-slider-thumb 
-			-webkit-appearance none
-			appearance none
-			width 1.4rem
+			width size
 			height @width
 
-			border 0.2rem solid color-pink
+			border stroke solid color-pink
 			border-radius 50%
 
 			cursor pointer
 			background-color color-lightgray
-		
+
 			&:active
 				background-color color-pink
+
+
+		-webkit-appearance: none;
+		appearance: none;
+
+		width: 29rem;
+		height: 2rem;
+		
+		background: transparent;
+
+		&::-moz-range-track 
+			track()
+		&::-webkit-slider-runnable-track
+			track()
+		&::-ms-track 
+			track()
+
+		&::-moz-range-thumb
+			thumb()
+		&::-webkit-slider-thumb 
+			thumb(0.25rem - 1.4rem)
+		&::-ms-thumb
+			thumb(0, 0.7rem, 0.125rem)
+
+		&_control
+			display none
 
 	&__setting
 		flex 1 0 auto
